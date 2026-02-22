@@ -8,9 +8,9 @@ finalcode..
 
 #define BLYNK_PRINT Serial
 
-#define BLYNK_TEMPLATE_ID "TMPL5EFhKz-w9"
-#define BLYNK_TEMPLATE_NAME "wheelchair prototype"
-#define BLYNK_AUTH_TOKEN "lBpelNGJWsUfc0zhksmQPlBA4bwTN9c8"
+#define BLYNK_TEMPLATE_ID   "YOUR_BLYNK_TEMPLATE_ID"
+#define BLYNK_TEMPLATE_NAME "YOUR_BLYNK_TEMPLATE_NAME"
+#define BLYNK_AUTH_TOKEN    "YOUR_BLYNK_AUTH_TOKEN"
 
 #include <WiFi.h>
 #include <BlynkSimpleEsp32.h>
@@ -18,8 +18,8 @@ finalcode..
 #include <math.h>
 
 // WiFi credentials
-char ssid[] = "iPhone";
-char pass[] = "safeer12345";
+char ssid[] = "YOUR_WIFI_SSID";
+char pass[] = "YOUR_WIFI_PASSWORD";
 
 // Motor pins (L298N)
 #define ENA 25
