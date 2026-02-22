@@ -6,7 +6,7 @@ I started with Webots simulation to test different indoor scenarios safely (corr
 
 ---
 
-## What I built (main functions)
+## What I built 
 
 - Manual + assisted/autonomous modes with continuous safety supervision  
 - Obstacle detection and avoidance using 3 ultrasonic sensors (front/left/right)  
@@ -17,7 +17,7 @@ I started with Webots simulation to test different indoor scenarios safely (corr
 
 ---
 
-## How the system works (simple explanation)
+## How the system works 
 
 - The ultrasonic sensors continuously measure distance on the front, left and right sides.  
 - If an obstacle is inside a threshold distance, the system takes safety action:  
@@ -31,7 +31,7 @@ In this project I learned that safety is not only about “detecting”. It is a
 
 ## Tech used
 
-### Hardware (prototype concept)
+### Hardware
 - ESP32  
 - L298N motor driver  
 - 3× HC-SR04 ultrasonic sensors (front / left / right)  
@@ -44,7 +44,7 @@ In this project I learned that safety is not only about “detecting”. It is a
 - C++ (embedded logic / control)  
 - Python (simulation controller / scripting as used in my workflow)  
 - Blynk (IoT UI: control + notifications)  
-
+- webots(R2023B)
 ---
 
 ## Repository structure
