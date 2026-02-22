@@ -1,0 +1,369 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+
+WorldInfo {
+  title "Smart Wheelchair Corridor World (Corrected)"
+}
+Viewpoint {
+  fieldOfView 0.785394
+  orientation 0.08988460600218964 -0.9648610894235046 -0.24690855740601483 5.5615717801
+  position -8.100352658 -2.082278588 5.358712743
+}
+DirectionalLight {
+  ambientIntensity 0.4
+  direction 0 -1 -1
+}
+Floor {
+  size 10 4
+  appearance Parquetry {
+    type "chequered"
+    colorOverride 0.4 0.7 0.6
+    IBLStrength 0
+  }
+}
+Solid {
+  translation 5 0 0.5
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.85 0.85 0.85
+        }
+      }
+      geometry Box {
+        size 0.2 4 1
+      }
+    }
+  ]
+  name "wall_right_end"
+  boundingObject Box {
+    size 0.2 4 1
+  }
+}
+Solid {
+  translation -5 0 0.5
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.85 0.85 0.85
+        }
+      }
+      geometry Box {
+        size 0.2 4 1
+      }
+    }
+  ]
+  name "wall_left_end"
+  boundingObject Box {
+    size 0.2 4 1
+  }
+}
+Solid {
+  translation 0 2 0.5
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.85 0.85 0.85
+        }
+      }
+      geometry Box {
+        size 0.2 10 1
+      }
+    }
+  ]
+  name "wall_top"
+  boundingObject Box {
+    size 0.2 10 1
+  }
+}
+Solid {
+  translation 0 -2 0.5
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.85 0.85 0.85
+        }
+      }
+      geometry Box {
+        size 0.2 10 1
+      }
+    }
+  ]
+  name "wall_bottom"
+  boundingObject Box {
+    size 0.2 10 1
+  }
+}
+Solid {
+  translation -0.5 0 0.25
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.4 0.4 0.4
+        }
+      }
+      geometry Box {
+        size 0.8 0.8 0.5
+      }
+    }
+  ]
+  name "obstacle_1"
+  boundingObject Box {
+    size 0.8 0.8 0.5
+  }
+}
+Solid {
+  translation 1.5 1.1 0.2
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.35 0.35 0.45
+        }
+      }
+      geometry Box {
+        size 1 0.5 0.4
+      }
+    }
+  ]
+  name "obstacle_2"
+  boundingObject Box {
+    size 1 0.5 0.4
+  }
+}
+Solid {
+  translation 2.8 -1.1 0.2
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.45 0.35 0.35
+        }
+      }
+      geometry Box {
+        size 0.9 0.6 0.4
+      }
+    }
+  ]
+  name "obstacle_3"
+  boundingObject Box {
+    size 0.9 0.6 0.4
+  }
+}
+Solid {
+  translation -2.5 1 0.15
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.35 0.45 0.35
+        }
+      }
+      geometry Box {
+        size 0.6 0.6 0.3
+      }
+    }
+  ]
+  name "obstacle_4"
+  boundingObject Box {
+    size 0.6 0.6 0.3
+  }
+}
+Pose {
+  translation -4 0 0.02
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.1 0.9 0.2
+          emissiveColor 0.05 0.3 0.05
+        }
+      }
+      geometry Box {
+        size 0.6 0.6 0.04
+      }
+    }
+  ]
+}
+Pose {
+  translation 4 0 0.02
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.9 0.2 0.2
+          emissiveColor 0.25 0.05 0.05
+        }
+      }
+      geometry Box {
+        size 0.6 0.6 0.04
+      }
+    }
+  ]
+}
+DEF POP_OBSTACLE Solid {
+  translation 1.5192820682557569e-07 8.000000151928209 0.24686167849862684
+  rotation -0.7071067811873213 0.7071067811857737 -3.5549558433799783e-12 6.498936150701708e-07
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.95 0.75 0.1
+        }
+      }
+      geometry Box {
+        size 0.6 0.6 0.5
+      }
+    }
+  ]
+  name "pop_obstacle"
+  boundingObject Box {
+    size 0.6 0.6 0.5
+  }
+  physics Physics {
+    mass 8
+  }
+  linearVelocity -9.105965357094667e-07 -9.105965357092983e-07 -7.002824858089482e-06
+  angularVelocity 3.6418088370443123e-06 -3.6418088372137617e-06 1.940384744156182e-17
+}
+Robot {
+  children [
+    Receiver {
+      name "sup_rx"
+      channel 1
+    }
+  ]
+  name "POP_SUPERVISOR"
+  controller "pop_supervisor"
+  supervisor TRUE
+}
+Pioneer3dx {
+  hidden position_0_0 -2.9838717659862257
+  hidden position_0_1 321.0676994254528
+  hidden position_0_2 343.7116879812895
+  hidden linearVelocity_0 -4.53841106205053e-09 8.347945338427908e-08 2.0455698050070075e-10
+  hidden angularVelocity_0 1.1878480410332895e-07 6.756216266003949e-08 -4.973300766419624e-07
+  hidden rotation_1 -0.5167189066890303 -0.6053930504853291 -0.6053931168209304 4.095458845050294
+  hidden position_1_0 -887.0258106722663
+  hidden linearVelocity_1 4.329729857752086e-08 -1.4156234609559158e-07 8.142356649143894e-09
+  hidden angularVelocity_1 9.26534892349614e-08 6.261716876440646e-08 -5.108788323661687e-07
+  hidden rotation_2 1 0 0 5.186502947234991
+  hidden linearVelocity_2 9.868651747800409e-08 -4.4280208202433335e-07 7.509255624245112e-09
+  hidden angularVelocity_2 1.3830819529036781e-08 4.222363671377248e-07 -5.133191810928467e-07
+  hidden rotation_4 -0.41441538411419 0.41441536071320006 0.8102590932624184 4.503523254857074
+  hidden linearVelocity_4 2.0647468986422302e-07 2.0796952855987476e-07 1.5770810892973736e-08
+  hidden angularVelocity_4 1.3162943503704997e-07 1.073132012088103e-07 -4.973349993552479e-07
+  hidden rotation_9 -0.7032965870037649 0.703296634709081 -0.1036713765498318 2.9349880398839976
+  hidden linearVelocity_9 -2.773007968009613e-07 2.0822002775005714e-07 -2.3242244612996092e-08
+  hidden angularVelocity_9 1.3546948058632825e-07 1.4843376695316292e-08 -4.973427581695439e-07
+  translation -3.9583494506443815 -0.019400768786543742 0.09494576884028622
+  rotation 0.01311556383096357 -0.8373878732387058 0.5464517652438804 0.0499973790353826
+  controller "wheelchair_keyboard"
+  extensionSlot [
+    Solid {
+      translation 0.1 0 0.08
+      children [
+        Shape {
+          geometry Box {
+            size 0.1 0.05 0.02
+          }
+        }
+        DistanceSensor {
+          translation 0.14 0 0.02
+          name "us_front"
+          lookupTable [
+            0 0 0
+            3 3 0
+          ]
+        }
+        DistanceSensor {
+          translation 0.13 0.05 0.02
+          rotation 0 0 1 0.35
+          name "us_front_left"
+          lookupTable [
+            0 0 0
+            3 3 0
+          ]
+        }
+        DistanceSensor {
+          translation 0.13 -0.05 0.02
+          rotation 0 0 1 -0.35
+          name "us_front_right"
+          lookupTable [
+            0 0 0
+            3 3 0
+          ]
+        }
+        DistanceSensor {
+          translation 0.02 0.08 0.02
+          rotation 0 0 1 1.5708
+          name "us_left"
+          lookupTable [
+            0 0 0
+            2 2 0
+          ]
+        }
+        DistanceSensor {
+          translation 0.02 -0.08 0.02
+          rotation 0 0 1 -1.5708
+          name "us_right"
+          lookupTable [
+            0 0 0
+            2 2 0
+          ]
+        }
+        DistanceSensor {
+          translation -0.1 0 0.02
+          rotation 0 0 1 3.14159
+          name "us_rear"
+          lookupTable [
+            0 0 0
+            2 2 0
+          ]
+        }
+        DistanceSensor {
+          translation -0.09 0.05 0.02
+          rotation 0 0 1 2.8
+          name "us_rear_left"
+          lookupTable [
+            0 0 0
+            2 2 0
+          ]
+        }
+        DistanceSensor {
+          translation -0.09 -0.05 0.02
+          rotation 0 0 1 -2.8
+          name "us_rear_right"
+          lookupTable [
+            0 0 0
+            2 2 0
+          ]
+        }
+        InertialUnit {
+          name "imu"
+        }
+        GPS {
+        }
+        Compass {
+        }
+        Emitter {
+          name "cmd_tx"
+          channel 1
+        }
+        LED {
+          name "warning_led"
+        }
+      ]
+      name "sensor_mount"
+    }
+  ]
+}
